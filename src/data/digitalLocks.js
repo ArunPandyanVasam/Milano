@@ -21,6 +21,17 @@ const digitalLocks = [
     availability: "In Stock",
     features: ["Remote unlock", "Battery operated", "Secure encryption"],
   },
+  {
+    id: "3",
+    name: "Emtek Electronic Lock",
+    brand: "Emtek",
+    image: "/images/products/digital-lock.jpg",
+    description: "Sleek and secure keypad deadbolt with modern design.",
+    sku: "DL-001",
+    price: "$199",
+    availability: "In Stock",
+    features: ["Keyless entry", "Bluetooth access", "Weather-resistant"],
+  },
 ];
 
 export default digitalLocks;
