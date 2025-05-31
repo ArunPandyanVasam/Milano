@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
-import ProductCard from "../components/ProductCard";
-import digitalLocks from "../data/digitalLocks";
-// You can import other data sets similarly
+import ProductCard from "@/components/sections/ProductCard";
+
+// Import all category data
+import digitalLocks from "@/data/digitalLocks";
+// import classicPulls from "@/data/classicPulls"; // add more later
 
 const categories = {
   "digital-locks": {
@@ -9,10 +11,10 @@ const categories = {
     description: "Explore our range of smart and secure digital locks.",
     products: digitalLocks,
   },
-  // Add other categories similarly
+  // Add more category mappings here
 };
 
-const CategoryPage = () => {
+const Category = () => {
   const { categorySlug } = useParams();
   const category = categories[categorySlug];
 

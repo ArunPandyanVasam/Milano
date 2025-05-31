@@ -22,4 +22,5 @@ const digitalLocks = [
     features: ["Remote unlock", "Battery operated", "Secure encryption"],
   },
 ];
+
 export default digitalLocks;
