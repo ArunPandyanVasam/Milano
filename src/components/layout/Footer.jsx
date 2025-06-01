@@ -20,7 +20,7 @@ const Footer = () => {
             Quick Links
           </h4>
           <ul className="space-y-3 text-sm">
-            {["Home", "Shop", "Services", "About", "FAQ"].map((item) => (
+            {["Home", "Shop", "Services", "About"].map((item) => (
               <li key={item}>
                 <Link
                   to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
@@ -99,31 +99,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-        </div>
-
-        {/* Legal */}
-        <div>
-          <h4 className="text-lg font-semibold mb-6 tracking-wide uppercase text-indigo-400">
-            Legal
-          </h4>
-          <ul className="space-y-3 text-sm">
-            <li>
-              <Link
-                to="/privacy-policy"
-                className="hover:text-indigo-400 transition-colors duration-300"
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/terms"
-                className="hover:text-indigo-400 transition-colors duration-300"
-              >
-                Terms & Conditions
-              </Link>
-            </li>
-          </ul>
         </div>
       </div>
 

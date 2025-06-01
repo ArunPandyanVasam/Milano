@@ -6,7 +6,6 @@ export const shopDropdown = {
       {
         title: 'Door Hardware',
         items: [
-          'Levers',
           'Digital Locks',
         ],
       },
@@ -14,20 +13,17 @@ export const shopDropdown = {
         title: 'Bathroom Accessories',
         items: [
           'Towel Bars',
-          'Paper Holders',
         ],
       },
       {
         title: 'Kitchen & Cabinet',
         items: [
           'Cabinet Hardware',
-          'Pulls',
         ],
       },
       {
         title: 'Stylish Door Pulls',
         items: [
-          'Modern Pulls',
           'Classic Pulls',
         ],
       },

@@ -4,22 +4,14 @@ import ProductCard from "@/components/sections/ProductCard";
 // Import all category data
 import digitalLocks from "@/data/digitalLocks";
 import classicPulls from "@/data/classicPulls";
-import modernPulls from "@/data/modernPulls";
 import towelBars from "@/data/towelBars";
-import paperHolders from "@/data/paperHolders";
 import cabinetHardware from "@/data/cabinetHardware";
-import pullsAndKnobs from "@/data/pullsAndKnobs";
 
 const categories = {
   "digital-locks": {
     title: "Digital Locks",
     description: "Explore our range of smart and secure digital locks.",
     products: digitalLocks,
-  },
-  "modern-pulls": {
-    title: "Modern Pulls",
-    description: "Minimalist and modern pulls for a clean aesthetic.",
-    products: modernPulls,
   },
   "classic-pulls": {
     title: "Classic Pulls",
@@ -32,20 +24,10 @@ const categories = {
       "Keep your towels neat and accessible with our premium towel bars.",
     products: towelBars,
   },
-  "paper-holders": {
-    title: "Paper Holders",
-    description: "Stylish and functional toilet paper holders.",
-    products: paperHolders,
-  },
   "cabinet-hardware": {
     title: "Cabinet Hardware",
     description: "Sleek and functional hardware for all your cabinets.",
     products: cabinetHardware,
-  },
-  "pulls-knobs": {
-    title: "Pulls",
-    description: "Elegant pulls and knobs to match your design vision.",
-    products: pullsAndKnobs,
   },
 };
 

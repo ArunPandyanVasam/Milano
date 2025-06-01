@@ -3,23 +3,15 @@ import { useParams } from "react-router-dom";
 // Import all product data
 import digitalLocks from "@/data/digitalLocks";
 import classicPulls from "@/data/classicPulls";
-import levers from "@/data/levers";
-import modernPulls from "@/data/modernPulls";
 import towelBars from "@/data/towelBars";
-import paperHolders from "@/data/paperHolders";
 import cabinetHardware from "@/data/cabinetHardware";
-import pullsAndKnobs from "@/data/pullsAndKnobs";
 
 // Combine all products into one array
 const allProducts = [
   ...digitalLocks,
   ...classicPulls,
-  ...levers,
-  ...modernPulls,
   ...towelBars,
-  ...paperHolders,
   ...cabinetHardware,
-  ...pullsAndKnobs,
 ];
 
 const ProductDetail = () => {
