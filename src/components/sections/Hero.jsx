@@ -28,12 +28,6 @@ const Hero = () => {
 
         <div className="flex flex-wrap justify-center gap-6">
           <Link
-            to="/shop"
-            className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 shadow-lg rounded-full text-white font-semibold tracking-wide transition transform hover:scale-105 hover:shadow-xl"
-          >
-            Shop Now
-          </Link>
-          <Link
             to="/get-a-quote"
             className="px-8 py-3 rounded-full border-2 border-white text-white bg-white/10 backdrop-blur-sm font-semibold tracking-wide transition transform hover:bg-white hover:text-indigo-700 hover:scale-105 hover:shadow-lg"
           >

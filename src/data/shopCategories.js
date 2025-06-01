@@ -21,7 +21,7 @@ export const shopDropdown = {
         title: 'Kitchen & Cabinet',
         items: [
           'Cabinet Hardware',
-          'Pulls & Knobs',
+          'Pulls',
         ],
       },
       {

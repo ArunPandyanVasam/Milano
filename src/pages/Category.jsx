@@ -3,7 +3,12 @@ import ProductCard from "@/components/sections/ProductCard";
 
 // Import all category data
 import digitalLocks from "@/data/digitalLocks";
-// import classicPulls from "@/data/classicPulls"; // add more later
+import classicPulls from "@/data/classicPulls";
+import modernPulls from "@/data/modernPulls";
+import towelBars from "@/data/towelBars";
+import paperHolders from "@/data/paperHolders";
+import cabinetHardware from "@/data/cabinetHardware";
+import pullsAndKnobs from "@/data/pullsAndKnobs";
 
 const categories = {
   "digital-locks": {
@@ -11,7 +16,37 @@ const categories = {
     description: "Explore our range of smart and secure digital locks.",
     products: digitalLocks,
   },
-  // Add more category mappings here
+  "modern-pulls": {
+    title: "Modern Pulls",
+    description: "Minimalist and modern pulls for a clean aesthetic.",
+    products: modernPulls,
+  },
+  "classic-pulls": {
+    title: "Classic Pulls",
+    description: "Timeless and elegant pulls for a traditional look.",
+    products: classicPulls,
+  },
+  "towel-bars": {
+    title: "Towel Bars",
+    description:
+      "Keep your towels neat and accessible with our premium towel bars.",
+    products: towelBars,
+  },
+  "paper-holders": {
+    title: "Paper Holders",
+    description: "Stylish and functional toilet paper holders.",
+    products: paperHolders,
+  },
+  "cabinet-hardware": {
+    title: "Cabinet Hardware",
+    description: "Sleek and functional hardware for all your cabinets.",
+    products: cabinetHardware,
+  },
+  "pulls-knobs": {
+    title: "Pulls",
+    description: "Elegant pulls and knobs to match your design vision.",
+    products: pullsAndKnobs,
+  },
 };
 
 const Category = () => {
@@ -19,7 +54,9 @@ const Category = () => {
   const category = categories[categorySlug];
 
   if (!category) {
-    return <div className="p-8 text-center text-red-600">Category not found.</div>;
+    return (
+      <div className="p-8 text-center text-red-600">Category not found.</div>
+    );
   }
 
   return (

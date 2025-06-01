@@ -1,25 +1,51 @@
 const classicPulls = [
   {
-    id: "1",
-    name: "Emtek Electronic Lock",
-    brand: "Emtek",
+    id: "cp-001",
+    name: "Traditional Brass Pull",
+    brand: "Baldwin",
     image: "/images/products/digital-lock.jpg",
-    description: "Sleek and secure keypad deadbolt with modern design.",
-    sku: "DL-001",
-    price: "$199",
+    description:
+      "Elegant brass door pull with timeless curves and a polished finish.",
+    sku: "CP-BAL-TRD",
+    price: "$45",
     availability: "In Stock",
-    features: ["Keyless entry", "Bluetooth access", "Weather-resistant"],
+    features: [
+      "Solid brass construction",
+      "Polished finish",
+      "Suitable for wood and metal doors",
+    ],
   },
   {
-    id: "2",
-    name: "Weiser SmartCode",
-    brand: "Weiser",
-    image: "/images/products/classic-pull.jpg",
-    description: "SmartCode lock with intuitive keypad and remote access.",
-    sku: "DL-002",
-    price: "$179",
+    id: "cp-002",
+    name: "Colonial Round Handle",
+    brand: "Dorex",
+    image: "/images/products/digital-lock.jpg",
+    description:
+      "Classic colonial-style handle perfect for heritage and traditional décor.",
+    sku: "CP-DOR-COL",
+    price: "$32",
     availability: "In Stock",
-    features: ["Remote unlock", "Battery operated", "Secure encryption"],
+    features: [
+      "Rounded grip design",
+      "Oil-rubbed bronze finish",
+      "Easy surface mount installation",
+    ],
+  },
+  {
+    id: "cp-003",
+    name: "Victorian Pull Handle",
+    brand: "Taymor",
+    image: "/images/products/digital-lock.jpg",
+    description:
+      "Decorative pull handle with ornate Victorian detailing and solid feel.",
+    sku: "CP-TAY-VIC",
+    price: "$55",
+    availability: "In Stock",
+    features: [
+      "Antique brass look",
+      "Victorian design motif",
+      "Durable and corrosion-resistant",
+    ],
   },
 ];
 
