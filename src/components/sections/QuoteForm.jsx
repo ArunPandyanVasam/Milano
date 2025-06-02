@@ -13,15 +13,51 @@ const QuoteForm = () => {
     message: "",
   });
 
+  const [status, setStatus] = useState({
+    loading: false,
+    success: null,
+    error: null,
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: connect to backend or email service
-    console.log("Submitting quote request:", formData);
+    setStatus({ loading: true, success: null, error: null });
+
+    try {
+      const response = await fetch("http://localhost:5000/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ loading: false, success: data.message, error: null });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          product: "",
+          message: "",
+        });
+      } else {
+        setStatus({ loading: false, success: null, error: data.message });
+      }
+    } catch (error) {
+      setStatus({
+        loading: false,
+        success: null,
+        error: "Failed to send. Please try again later.",
+      });
+    }
   };
 
   return (
@@ -93,11 +129,21 @@ const QuoteForm = () => {
         />
       </div>
 
+      {status.success && (
+        <p className="text-green-600 text-sm font-medium">{status.success}</p>
+      )}
+      {status.error && (
+        <p className="text-red-600 text-sm font-medium">{status.error}</p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-md transition"
+        disabled={status.loading}
+        className={`w-full ${
+          status.loading ? "bg-indigo-400" : "bg-indigo-600 hover:bg-indigo-700"
+        } text-white font-semibold px-6 py-3 rounded-md transition`}
       >
-        Submit Request
+        {status.loading ? "Sending..." : "Submit Request"}
       </button>
     </form>
   );
