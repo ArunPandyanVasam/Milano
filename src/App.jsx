@@ -4,6 +4,8 @@ import { lazy, Suspense } from "react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/layout/ScrollToTop";
+import BookConsultation from "./pages/BookConsultation";
+import VolumePricing from "./pages/VolumePricing";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -22,6 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/book-consultation" element={<BookConsultation />} />
+          <Route path="/volume-pricing" element={<VolumePricing />} />
           <Route path="/get-a-quote" element={<GetAQuote />} />
           <Route path="/shop/:categorySlug" element={<Category />} />
           <Route path="/product/:id" element={<ProductDetail />} />

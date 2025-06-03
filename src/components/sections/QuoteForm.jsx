@@ -103,7 +103,7 @@ const QuoteForm = () => {
 
         <div>
           <label className="block font-medium mb-1 text-gray-700">
-            Product (optional)
+            Products
           </label>
           <input
             type="text"
