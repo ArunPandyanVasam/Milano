@@ -3,7 +3,7 @@ import React from "react";
 import brands from "../../data/brandsWeCarry";
 
 const BrandsWeCarry = () => {
-  return (
+  return ( 
     <section className="bg-white dark:bg-gray-950 py-20 px-4 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
