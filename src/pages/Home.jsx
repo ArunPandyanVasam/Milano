@@ -9,7 +9,7 @@ import React from "react";
 
 
 const Home = () => {
-  return (
+  return ( 
     <>
       <Hero />
       <FeaturedCategories />
