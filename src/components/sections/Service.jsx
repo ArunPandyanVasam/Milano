@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { FaTools, FaTruck, FaHandshake, FaHome, FaUsers, FaCalendarAlt, FaClipboardList, FaUserTie } from "react-icons/fa";
+import {
+  FaTools,
+  FaTruck,
+  FaHandshake,
+  FaHome,
+  FaUsers,
+  FaClipboardList,
+} from "react-icons/fa";
+import { Link } from "react-router-dom"; // Added import for routing
 
 const fadeInClass = "opacity-100 translate-y-0";
 const fadeOutClass = "opacity-0 translate-y-8";
@@ -14,15 +22,6 @@ const ServiceCard = ({ icon, title, description }) => (
   </div>
 );
 
-const CTAButton = ({ text, onClick }) => (
-  <button
-    onClick={onClick}
-    className="mt-4 inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-  >
-    {text}
-  </button>
-);
-
 const QuoteSnippet = ({ quote, author, role }) => (
   <blockquote className="mt-8 italic text-gray-700 border-l-4 border-indigo-500 pl-4 max-w-xl mx-auto">
     “{quote}”
@@ -35,7 +34,6 @@ const QuoteSnippet = ({ quote, author, role }) => (
 const Service = () => {
   const [visible, setVisible] = useState(false);
 
-  // Simple fade in on mount
   useEffect(() => {
     const timeout = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(timeout);
@@ -84,13 +82,11 @@ const Service = () => {
           </div>
         </div>
 
-        {/* Split Sections */}
         <div>
           <h2 className="text-2xl font-bold text-indigo-700 mb-8 border-b-4 border-indigo-300 pb-2">
             Tailored Support
           </h2>
 
-          {/* For Homeowners */}
           <div className="mb-12 bg-white rounded-xl shadow-lg p-8 border border-gray-200">
             <h3 className="text-xl font-semibold text-indigo-600 mb-4 flex items-center gap-3">
               <FaUsers className="text-2xl" /> For Homeowners
@@ -100,10 +96,14 @@ const Service = () => {
               <li>Product suggestions</li>
               <li>In-home or virtual consultation</li>
             </ul>
-            <CTAButton text="Book a Consultation" onClick={() => alert("Booking Consultation for Homeowners")} />
+            <Link
+              to="/services"
+              className="mt-4 inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              Book a Consultation
+            </Link>
           </div>
 
-          {/* For Contractors & Builders */}
           <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
             <h3 className="text-xl font-semibold text-indigo-600 mb-4 flex items-center gap-3">
               <FaClipboardList className="text-2xl" /> For Contractors & Builders
@@ -113,7 +113,12 @@ const Service = () => {
               <li>Project timeline support</li>
               <li>Dedicated service manager</li>
             </ul>
-            <CTAButton text="Get Volume Pricing" onClick={() => alert("Requesting Volume Pricing for Contractors")} />
+            <Link
+              to="/services"
+              className="mt-4 inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              Get Volume Pricing
+            </Link>
           </div>
         </div>
       </section>

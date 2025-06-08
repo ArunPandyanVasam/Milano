@@ -14,7 +14,7 @@ const promotions = [
     color:
       "from-blue-200 to-blue-100 dark:from-blue-800 dark:to-blue-700 text-blue-900 dark:text-blue-100 border-blue-300 dark:border-blue-600",
     cta: "Shop Now",
-    link: "/shop?filter=emtek-electronic",
+    link: "/",
   },
   {
     title: "Spring Sale – Up to 25% Off Bath Sets",
@@ -23,7 +23,7 @@ const promotions = [
     color:
       "from-green-200 to-green-100 dark:from-green-800 dark:to-green-700 text-green-900 dark:text-green-100 border-green-300 dark:border-green-600",
     cta: "Explore Deals",
-    link: "/shop?filter=spring-sale",
+    link: "/",
   },
   {
     title: "Bundle & Save for Contractors",
@@ -32,7 +32,7 @@ const promotions = [
     color:
       "from-yellow-200 to-yellow-100 dark:from-yellow-800 dark:to-yellow-700 text-yellow-900 dark:text-yellow-100 border-yellow-300 dark:border-yellow-600",
     cta: "Get Quote",
-    link: "/services#contractor",
+    link: "/",
   },
 ];
 
